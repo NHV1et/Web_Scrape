@@ -52,3 +52,5 @@ ten_server = a.get("nameServer")
 print(f"Ten Server thứ nhất: {ten_server[0]}") 
 print(f"Tên miền: {ten_mien}")
 print(f"Tên server: {ten_server}")
+
+#lmao xem có thay đổi nếu phang thuần github không
