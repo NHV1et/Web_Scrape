@@ -1,0 +1,112 @@
+{
+  "ssl": {
+    "TLS_version": "TLSv1.3",
+    "Cipher": [
+      "TLS_AES_256_GCM_SHA384",
+      "TLSv1.3",
+      256
+    ],
+    "Issued_to": "chinhphu.vn",
+    "Issued_by": "GlobalSign RSA OV SSL CA 2018",
+    "Issue_date": "Mar  4 09:26:10 2026 GMT",
+    "Expiry_date": "Apr  5 09:26:09 2027 GMT"
+  },
+  "subdomain": [
+    "autodiscover.chinhphu.vn",
+    "datamedia.chinhphu.vn",
+    "hotro.chinhphu.vn",
+    "mail.chinhphu.vn",
+    "noicac.chinhphu.vn",
+    "one.chinhphu.vn",
+    "owa.chinhphu.vn",
+    "www.chinhphu.vn",
+    "www.xacthuc.chinhphu.vn",
+    "xacthuc.chinhphu.vn"
+  ],
+  "Tech": {
+    "CMS": {},
+    "Framework": {
+      "ASP_NET": {
+        "string": [
+          "ViewState Encrypted"
+        ]
+      }
+    },
+    "Server": {},
+    "Language": {},
+    "JavaScript": {
+      "Bootstrap": {
+        "version": [
+          "4.5.2"
+        ]
+      },
+      "JQuery": {
+        "version": [
+          "3.6.0"
+        ]
+      }
+    },
+    "Security": {
+      "Strict-Transport-Security": {
+        "string": [
+          "max-age=31536000; includeSubDomains; preload"
+        ]
+      },
+      "X-Frame-Options": {
+        "string": [
+          "SAMEORIGIN"
+        ]
+      }
+    }
+  },
+  "DNS": {
+    "A": [
+      "123.30.53.15",
+      "14.225.199.148",
+      "14.225.10.58"
+    ],
+    "NS": [
+      "hcm-server1.vnn.vn.",
+      "vdc-hn01.vnn.vn."
+    ],
+    "TXT": [
+      "\"_globalsign-domain-verification=6DEoKB4q3WiXiqG5ztMC2g-u_RqzoyVTtSoabRTTUu\"",
+      "\"7+myQMLwooJ3hVPIFN6l+znDEvkKTfvyW+Pau9FMEbM=\"",
+      "\"CWWWgzING5/gYbX3LcebinQIg/731LMmbg5rP/Oo1GE=\"",
+      "\"_globalsign-domain-verification=RoAP3WTIt6-eooyS7GF6yaXfXOvZibrAOPsaOcXzOO\"",
+      "\"_globalsign-domain-verification=8d0nF1Y_0KjDmHZ36Y--SgdP3vmP0NIfITBqVv4djp\"",
+      "\"v=spf1 a mx ~all\""
+    ]
+  },
+  "Port": [
+    {
+      "Port": "80",
+      "Proto": "tcp",
+      "Service": "http"
+    },
+    {
+      "Port": "111",
+      "Proto": "tcp",
+      "Service": "rpcbind    2-4 (RPC #100000)"
+    },
+    {
+      "Port": "443",
+      "Proto": "tcp",
+      "Service": "ssl/https  openresty"
+    },
+    {
+      "Port": "5666",
+      "Proto": "tcp",
+      "Service": "tcpwrapped"
+    }
+  ],
+  "Page_data": {
+    "Title": "Cổng Thông tin điện tử Chính phủ",
+    "Language": "vi",
+    "Description": "Cổng Thông tin điện tử Chính phủ",
+    "Links": 283,
+    "Forms": 1,
+    "Script": 22,
+    "Styles": 30
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "code": "0",
+    "totalQuery": 0,
+    "domainName": "svb.vn",
+    "registrar": "Công ty TNHH phần mềm Nhân Hòa",
+    "nameServer": [
+        "ns1.zonedns.vn",
+        "ns2.zonedns.vn",
+        "ns3.zonedns.vn",
+        "ns4.zonedns.vn"
+    ],
+    "status": [
+        "clientTransferProhibited"
+    ],
+    "creationDate": "23-03-2024",
+    "expirationDate": "23-03-2027",
+    "creationDate_L": 1711126800000,
+    "expirationDate_L": 1805734800000,
+    "registrantName": "Nguyễn Thành Điển",
+    "DNSSEC": "unsigned",
+    "rawtext": "{\n  \"domainName\": \"svb.vn\",\n  \"existed\": true,\n  \"issuedDate\": {\n    \"year\": 2024,\n    \"month\": 3,\n    \"day\": 23,\n    \"timezone\": 420,\n    \"hour\": 12,\n    \"minute\": 56,\n    \"second\": 53\n  },\n  \"expiredDate\": {\n    \"year\": 2027,\n    \"month\": 3,\n    \"day\": 23,\n    \"timezone\": 420,\n    \"hour\": 12,\n    \"minute\": 56,\n    \"second\": 53\n  },\n  \"registrarName\": \"Công ty TNHH phần mềm Nhân Hòa\",\n  \"registrantName\": \"Nguyễn Thành Điển\",\n  \"status\": [\n    \"clientTransferProhibited\"\n  ],\n  \"nameServer\": [\n    {\n      \"name\": \"ns1.zonedns.vn\"\n    },\n    {\n      \"name\": \"ns2.zonedns.vn\"\n    },\n    {\n      \"name\": \"ns3.zonedns.vn\"\n    },\n    {\n      \"name\": \"ns4.zonedns.vn\"\n    }\n  ],\n  \"dnssec\": \"unsigned\"\n}",
+    "message": "Đã được đăng ký"
+}

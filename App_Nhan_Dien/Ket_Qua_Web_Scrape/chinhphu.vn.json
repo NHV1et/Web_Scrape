@@ -1,0 +1,24 @@
+
+{
+    "code": "0",
+    "totalQuery": 0,
+    "domainName": "chinhphu.vn",
+    "registrar": "Công ty Cổ phần GMO-Z.com RUNSYSTEM",
+    "nameServer": [
+        "hcm-server1.vnn.vn",
+        "vdc-hn01.vnn.vn"
+    ],
+    "status": [
+        "clientTransferProhibited",
+        "serverUpdateProhibited",
+        "serverTransferProhibited"
+    ],
+    "creationDate": "20-07-2005",
+    "expirationDate": "20-07-2028",
+    "creationDate_L": 1121792400000,
+    "expirationDate_L": 1847638800000,
+    "registrantName": "Cổng thông tin điện tử chính phủ",
+    "DNSSEC": "unsigned",
+    "rawtext": "{\n  \"domainName\": \"chinhphu.vn\",\n  \"existed\": true,\n  \"issuedDate\": {\n    \"year\": 2005,\n    \"month\": 7,\n    \"day\": 20,\n    \"timezone\": 420,\n    \"hour\": 0,\n    \"minute\": 0,\n    \"second\": 0\n  },\n  \"expiredDate\": {\n    \"year\": 2028,\n    \"month\": 7,\n    \"day\": 20,\n    \"timezone\": 420,\n    \"hour\": 0,\n    \"minute\": 0,\n    \"second\": 0\n  },\n  \"registrarName\": \"Công ty Cổ phần GMO-Z.com RUNSYSTEM\",\n  \"registrantName\": \"Cổng thông tin điện tử chính phủ\",\n  \"status\": [\n    \"clientTransferProhibited\",\n    \"serverUpdateProhibited\",\n    \"serverTransferProhibited\"\n  ],\n  \"nameServer\": [\n    {\n      \"name\": \"hcm-server1.vnn.vn\"\n    },\n    {\n      \"name\": \"vdc-hn01.vnn.vn\"\n    }\n  ],\n  \"dnssec\": \"unsigned\"\n}",
+    "message": "Đã được đăng ký"
+}
