@@ -2,7 +2,12 @@
 import requests
 import json
 import os
-
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+# Nếu dùng request thì khi mò web phải viết header user, còn request_html thì không cần,  
+# nhưng request_html lại không lấy được dữ liệu từ API, nên mình sẽ dùng request để lấy dữ liệu từ API,  
+# còn selenium để mò web nếu cần thiết (chưa biết mò cái gì)
 def loc_dl_tu_api(domain:str):
     # API link (Chỉ Vi en)
     api_url = f"https://whois.inet.vn/api/whois/domainspecify/{domain}"
@@ -43,14 +48,47 @@ def kiem_tra_ten_mien(domain:str):
 
     # Dưới này về sau chèn web scrape (Text, image,...)
 
- 
+
+def scrape_web_dong(url:str):
+    url = url.strip()
+    driver = webdriver.Firefox()
+    driver.get(url)
+    # Vet thong tin
+    try:
+        #Cách tự cook
+        #i = 1
+        #ds_bao = driver.find_element(By.CLASS_NAME, "main-articles")
+        # for bao in ds_bao.find_elements(By.CLASS_NAME, "main-article-item"):
+        #     # Truy cập được vào từng cái div con được, xem document để chỉ lấy link hrefprint(bao.text.strip()) 
+        #     print(f"Tiêu đề: {bao.text.strip()}")
+        #     href_element = bao.find_element(By.XPATH, f"//*[@id='1']/div/div/div[1]/div[2]/div/div[{i}]/a")
+        #     # Tức là phải lưu element muốn xuất thành một biến rồi mới get được
+        #     print(f"Link: {href_element.get_attribute('href')}")
+        #     i += 1
+
+        #Cách tối ưu hơn
+        for bao in driver.find_elements(By.CLASS_NAME, "main-article-item"):
+            #Không cần phải truy cập vào div cha trước rồi mới vào div con 
+            #Do cái find_elements trả về một list rồi
+            print(f"Tiêu đề: {bao.text.strip()}")
+            href_element = bao.find_element(By.TAG_NAME, "a")
+            print(f"Link: {href_element.get_attribute('href')}")
+        #print(ds_bao.text.strip())
+        #print(type(ds_bao))
+        #print(help(ds_bao))
+        #print(ds_bao.text.strip())
+        driver.quit()
+    except NoSuchElementException as e:
+        print(f"Có lỗi xảy ra khi tìm kiếm phần tử: {e}")
+        
+
+scrape_web_dong("https://chinhphu.vn/")
 # kiem_tra_ten_mien("svb.vn")
 
-a = loc_dl_tu_api("svb.vn")
-ten_mien = a.get("domainName")
-ten_server = a.get("nameServer")
-print(f"Ten Server thứ nhất: {ten_server[0]}") 
-print(f"Tên miền: {ten_mien}")
-print(f"Tên server: {ten_server}")
+# a = loc_dl_tu_api("svb.vn")
+# ten_mien = a.get("domainName")
+# ten_server = a.get("nameServer")
+# print(f"Ten Server thứ nhất: {ten_server[0]}") 
+# print(f"Tên miền: {ten_mien}")
+# print(f"Tên server: {ten_server}")
 
-#lmao xem có thay đổi nếu phang thuần github không
