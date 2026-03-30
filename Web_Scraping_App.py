@@ -55,6 +55,9 @@ def scrape_web_dong(url:str):
     driver.get(url)
     # Vet thong tin
     try:
+        list_bao = []
+        list_link = []
+        list_lanh_dao = []
         #Cách tự cook
         #i = 1
         #ds_bao = driver.find_element(By.CLASS_NAME, "main-articles")
@@ -69,15 +72,28 @@ def scrape_web_dong(url:str):
         #Cách tối ưu hơn
         for bao in driver.find_elements(By.CLASS_NAME, "main-article-item"):
             #Không cần phải truy cập vào div cha trước rồi mới vào div con 
-            #Do cái find_elements trả về một list rồi
-            print(f"Tiêu đề: {bao.text.strip()}")
+            #Do cái find_elements trả về một list rồi 
+            #print(f"Tiêu đề: {bao.text.strip()}")
+            list_bao.append(bao.text.strip())
             href_element = bao.find_element(By.TAG_NAME, "a")
-            print(f"Link: {href_element.get_attribute('href')}")
-        #print(ds_bao.text.strip())
-        #print(type(ds_bao))
-        #print(help(ds_bao))
-        #print(ds_bao.text.strip())
+            list_link.append(href_element.get_attribute('href'))
+            #print(f"Link: {href_element.get_attribute('href')}")
+        for lanh_dao in driver.find_elements(By.CLASS_NAME,"home__ptt-item"):
+            pass
+            ten = lanh_dao.find_element(By.CLASS_NAME,"role")
+            chuc_vu = lanh_dao.find_element(By.CLASS_NAME,"name")
+            href_element = lanh_dao.find_element(By.TAG_NAME,"a")
+            link_profile = href_element.get_attribute('href')
+            list_lanh_dao.append(f"Name: {ten.text.strip()}, Chuc vu: {chuc_vu.text.strip()} , link: {link_profile}")
+            
+        data_dict = {"Tiêu đề": list_bao, "Link": list_link, "Lãnh đạo":list_lanh_dao}
+        print(data_dict)
+        with open("Ket_Qua_Web_Scrape/Thong_Tin_Bao_Chinh_Phu.json", "w", encoding="utf-8") as f:
+            json.dump(data_dict, f, indent=4, ensure_ascii=False)
         driver.quit()
+        list_lanh_dao.clear()
+        list_bao.clear()
+        list_link.clear()
     except NoSuchElementException as e:
         print(f"Có lỗi xảy ra khi tìm kiếm phần tử: {e}")
         
